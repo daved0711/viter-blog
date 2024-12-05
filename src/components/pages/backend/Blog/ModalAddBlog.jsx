@@ -22,6 +22,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import useUploadPhoto from "@/components/custom-hook/useUploadPhoto";
 import { imgPath } from "@/components/helpers/functions-general";
 import useQueryData from "@/components/custom-hook/useQueryData";
+import { queryData } from "@/components/helpers/queryData";
 const ModalAddBlog = ({ itemEdit }) => {
   const { dispatch } = React.useContext(StoreContext);
 
@@ -37,7 +38,7 @@ const ModalAddBlog = ({ itemEdit }) => {
   const mutation = useMutation({
     
     mutationFn: (values) =>
-      useQueryData(
+      queryData(
         itemEdit ? `/v2/blog/${itemEdit.blog_aid}` : `/v2/blog`,
         itemEdit ? "put" : "post",
         values
@@ -300,7 +301,8 @@ const ModalAddBlog = ({ itemEdit }) => {
                         <InputTextArea
                           label="Instruction"
                           name="blog_instruction"
-                          className="overflow-y-auto custom-scroll p-2 !h-[300px]  outline-none  w-full rounded-md bg-primary text-body border border-line resize-none"
+                          className="overflow-y-auto custom-scroll p-2 !h-[300px]  
+                          outline-none  w-full rounded-md bg-primary text-body border border-line resize-none"
                         />
                       </div>
                     </div>

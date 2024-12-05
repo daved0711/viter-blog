@@ -13,15 +13,15 @@ const SideNavigation = ({menu}) => {
     },
 
     {
-        title : 'Recipe',
-        slug : '/admin/recipe',
+        title : 'Blog',
+        slug : '/admin/blog',
         icon : <Utensils size={16} />,
     },
 ]
   return (
     <>
        <aside className='p-4 border-r border-line'>
-           <img src={`${imgPath}/logo-recipe.png`} alt="" className='w-[50%] mx-auto mt-2' />
+           <img src={`${imgPath}/logo-blog.png`} alt="" className='w-[50%] mx-auto mt-2' />
            <nav>
         <ul className='mt-10'>
             {links.map((item,key)=>( <li className={`${menu === item.slug.replaceAll("/admin/","") ?

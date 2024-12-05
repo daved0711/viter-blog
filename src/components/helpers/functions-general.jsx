@@ -1,4 +1,4 @@
-export const imgPath = "http://localhost/viter-recipe/public/img"
+export const imgPath = "http://localhost/viter-blog/public/img"
 export const projectURL = "http://localhost/viter-blog";
 
 
