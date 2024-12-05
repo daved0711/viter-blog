@@ -4,8 +4,8 @@ import Banner from './Banner'
 import WhatWeDo from './WhatWeDo'
 import Work from './Work'
 import Values from './Values'
-import LatestNews from './LatestNews'
 import Footer from './Footer'
+import News from './News'
 
 const Homepage = () => {
   return (
@@ -16,7 +16,7 @@ const Homepage = () => {
     <WhatWeDo/>
     <Work/>
     <Values/>
-    <LatestNews/>
+    <News title="Latest News"/>
     <Footer/>
     </div>
    </>

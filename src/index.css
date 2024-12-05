@@ -313,5 +313,14 @@ transition-all z-30;
 .btn-animate:hover::after{
   @apply bottom-2;
 }
+.blog-content h2{
+  @apply text-4xl font-normal font-[syne];
+}
+.blog-content h3{
+  @apply text-2xl font-normal font-[syne];
+}
+.blog-content p{
+  @apply leading-relaxed mb-5;
+}
 
 }
