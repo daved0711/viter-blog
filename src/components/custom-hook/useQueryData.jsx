@@ -9,9 +9,9 @@ const useQueryData = (endpoint, method, key = "", fd = {}, id = null) => {
     queryFn: () => useQueryData(endpoint, method, fd),
 
 
-    // retry: false,
-    // refetchOnWindowFocus: true,
-    // cacheTime: 200,
+    retry: false,
+    refetchOnWindowFocus: true,
+    cacheTime: 200,
   });
 };
 

@@ -51,7 +51,7 @@ const BlogTable = ({setItemEdit}) => {
  
   return (
     <>
-<div className='mt-10 bg-secondary rounded-md p-4 border border-line relative'>
+  <div className='mt-10 bg-secondary rounded-md p-4 border border-line relative'>
             {!isLoading || (isFetching && <SpinnerTable />)}{" "}
                       <div className="table-wrapper custom-scroll">
                         
@@ -60,10 +60,9 @@ const BlogTable = ({setItemEdit}) => {
                             <tr>
                               <th>#</th>
                               <th>Status</th>
-                              <th className='w-[50%]'>Title</th>
-                              <th> Category</th>
-                              <th> level</th>
-                            
+                              <th>Title</th>
+                              <th>Category</th>
+                              <th>Author</th>
                               <th></th>
                             </tr>
                           </thead>
@@ -87,7 +86,8 @@ const BlogTable = ({setItemEdit}) => {
                                   </td>
                                 </tr>
                               )}
-                              {result?.data.map((item, key) => {
+
+                            {result?.data.map((item, key) => {
                             
                             return (
                             <tr key={key}>
@@ -95,7 +95,7 @@ const BlogTable = ({setItemEdit}) => {
                             <td><Pills isActive={item.blog_is_active}/></td>
                             <td>{item.blog_title}</td>
                             <td className='capitalize'>{item.blog_category}</td>
-                            <td className='capitalize'>{item.blog_level}</td>
+                            <td className='capitalize'>{item.blog_author}</td>
                             <td>
                               <ul className="table-action " >
                                 {item.blog_is_active ? (<>
@@ -126,10 +126,22 @@ const BlogTable = ({setItemEdit}) => {
                         <LoadMore/>
                       </div>
                       </div>
-                      {store.isDelete && (<ModalDelete mysqlApiDelete={`/v2/blog/${id}`}queryKey="blog"/>)}
-                    {store.isConfirm && (<ModalConfirm queryKey="blog"mysqlApiArchive={`/v2/blog/active/${id}`}active={isActive}/> )}
+{store.isDelete && (
+                        <ModalDelete
+                          mysqlApiDelete={`/v2/blog/${id}`}
+                          queryKey="blog"
+                        />
+                      )}
+
+                      {store.isConfirm && (
+                        <ModalConfirm
+                        queryKey="blog"
+                        mysqlApiArchive={`/v2/blog/active/${id}`}
+                        active={isActive}/>
+                        )}
         </>  
   )
+
  
 }
 

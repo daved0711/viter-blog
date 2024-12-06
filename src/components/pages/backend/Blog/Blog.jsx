@@ -29,7 +29,7 @@ const Blog = () => {
         <div className=" layout-division ">
        <SideNavigation menu="blog"/>
             <main className=''>
-               <Header title='Blog' subtitle='Manage Kiosk Blog'/>
+               <Header title='Blog' subtitle='Manage  Blog'/>
                 <div className='p-8'> 
                     <div className='flex justify-between items-center'>
                       <Searchbar/>

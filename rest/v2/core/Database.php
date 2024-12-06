@@ -14,7 +14,7 @@ class Database
 
         // Localhost
         $host = "localhost";
-        $dbname = "blog_v1";
+        $dbname ="blog_v1";
         $username = "root";
         $password = "";
 

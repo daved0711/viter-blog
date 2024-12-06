@@ -1,6 +1,6 @@
 
 import { imgPath } from '@/components/helpers/functions-general'
-import { ChartBarStacked, Clapperboard, LayoutDashboard, Megaphone, Star, Utensils } from 'lucide-react'
+import { ChartBarStacked, Clapperboard, LayoutDashboard, Megaphone, Rss, Star, Utensils } from 'lucide-react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ const SideNavigation = ({menu}) => {
     {
         title : 'Blog',
         slug : '/admin/blog',
-        icon : <Utensils size={16} />,
+        icon : <Rss  size={16} />,
     },
 ]
   return (
